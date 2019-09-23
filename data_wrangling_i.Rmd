@@ -1,0 +1,37 @@
+---
+title: "data_wrangling_i"
+author: "Hana Akbarnejad"
+date: "9/22/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+
+litters_data = read_csv(file = "./data/FAS_litters.csv")
+litters_data = janitor::clean_names(litters_data)
+names(litters_data)
+
+```
+
+```{r learning_assessment_1}
+
+FAS_pups_data = read_csv(file = "./data/FAS_pups.csv", col_types = "ciiiii")
+names(FAS_pups_data)
+
+getwd()
+read_csv(file = "C:/Users/Halbatross/Desktop/MS Biost Courses/Data Science I (P8105)/In_class_stuff/data_wrangling_i/data/FAS_pups.csv")
+
+FAS_pups_data = janitor::clean_names(FAS_pups_data)
+names(FAS_pups_data)
+head(FAS_pups_data, 7)
+tail(FAS_pups_data, 3)
+
+skimr::skim(FAS_pups_data)
+
+FAS_pups_data_2 = read.csv(file = "./data/FAS_pups.csv")
+
+```
+
